@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;400&family=Pangolin&family=:ital,wght@0,400;1,400;1,500&family=Preahvihear&display=swap" rel="stylesheet">
+    <title>All Products-RedStore</title>
+</head>
+<body>
+   
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+           <a href="Index.html"> <img src="RedStore_Img/images/logo.png" width="125px"></a>
+        </div>
+        <nav>
+         <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Detail.html">About Us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="Login.html">Account</a></li>
+         </ul>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="Bars"></i>
+         </div>
+       <a href="cart.html"> <img src="RedStore_Img/images/cart.png" width="30px" height="30px"></a>
+    </div>
+    </div>
+
+    <!-- cart items  -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="RedStore_Img/images/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick ="login()">Login</span>
+                            <span onclick ="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="Login">
+                            <input type="text" placeholder="User Name">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password?</a>
+                        </form>
+                        <form id="Reg-Form">
+                            <input type="text" placeholder="User Name">
+                            <input type="email" placeholder="Enter your Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- footer  -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and IOS</p>
+                        <div class="aap-logo">
+                            <img src="RedStore_Img/images/play-store.png" alt="">
+                            <img src="RedStore_Img/images/app-store.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="RedStore_Img/images/logo-white.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio fugiat cum magnam quia praesentium, minima delectus eos ipsa autem suscipit. Id, soluta.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>FaceBook</li>
+                            <li>Twitter<li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="Copy">Copyright &copy; 2023 - Khubaib</p>
+            </div>
+        </div>
+<script>
+    var Login = document.getElementById("Login")
+    var Reg = document.getElementById("Reg-Form")
+    var indicator = document.getElementById("indicator")
+
+    function register(){
+        Reg.style.transform = "translateX(0px)";
+        Login.style.transform = "translateX(0px)";
+        indicator.style.transform ="translateX(100px)"
+    }
+    function login(){
+        Login.style.transform = "translateX(300px)";
+        Reg.style.transform = "translateX(300px)";
+        indicator.style.transform ="translateX(0px)"
+    }
+
+    let menu = document.querySelector('#Bars')
+            
+            let navbar = document.querySelector('.navbar')
+            menu.classList.toggle('fa-times')
+            menu.onclick = function(){
+            navbar.classList.toggle('active')
+            }
+
+</script>
+
+</body>
+</html>
